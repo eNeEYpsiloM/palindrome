@@ -26,12 +26,12 @@ function addWord(request, response) {
 	else 
 		wordVerif = "is NOT a palindrome."
 
-	words [word.toUpperCase()] = wordVerif;
+	words [word] = wordVerif;
 	var data = JSON.stringify(words, null, 2);
 	fs.writeFile('words.json', data, finished);
 	
 	function finished(err) {
-		console.log('saved | ' + word.toUpperCase());
+		console.log('saved | ' + word);
 	}
 	
 	var reply = {

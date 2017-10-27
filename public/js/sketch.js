@@ -24,7 +24,6 @@ function submitWord() {
 }
 
 function gotData(data) {
-  background(51);
   console.log(data);
   var keys = Object.keys(data);
   for (var i = 0; i < keys.length; i++) {
@@ -32,9 +31,8 @@ function gotData(data) {
     var description = data[word];
     var x = random(width);
     var y = random(height);
-    fill(250);
-    textSize(18);
-    textAlign("center");
-    text(word + " - " + description, x, y);
+    textSize(16);
+    textAlign(CENTER);
+    text(word + " " + description, x, y);
   }
 }
